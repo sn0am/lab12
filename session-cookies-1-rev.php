@@ -17,12 +17,13 @@ $today = date('l, F j, Y');
      $visitcount = 0;
 	 $firstday = date('l, F j, Y');
 	 $firsttimestamp = date('g:i A');
+// set first_visit cookie with date/time when number of visits is zero, with expiration for 2 full weeks
 	 $FIRST_VISIT = $firstday . " at " . $firsttimestamp;
 	 setcookie ("FIRST_VISIT", $FIRST_VISIT, time() + 3600*24*14);
 	 $firsttime = $_COOKIE["FIRST_VISIT"];
   } else { 
      $visitcount = $_COOKIE["VISIT_NUMBER"];
-	 $firsttime = $_COOKIE["FIRST_VISIT"];
+	  $firsttime = $_COOKIE["FIRST_VISIT"];
   }
   
 
